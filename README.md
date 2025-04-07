@@ -1,7 +1,7 @@
 ### Desenvolvimento Full Stack - PUC-Rio
 
 ## MVP Back End com Flask + Interface React:
-# Big Loja (loja virtual) 🛒
+# 🛒 Big Loja (loja virtual) 
 
 O objetivo do MVP foi desenvolver uma loja virtual, contemplando tanto a experiência do usuário quanto o gerenciamento administrativo do sistema. 
 
