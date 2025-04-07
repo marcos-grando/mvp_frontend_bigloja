@@ -1,0 +1,248 @@
+
+:root {
+    --boss-grid: repeat(15, 1fr);
+
+    --nome-column:  6/16;
+    --nome-row: 1;
+
+    --categ-column: 6/10;
+    --categ-row: 2;
+    --valor-column: 10/13;
+    --valor-row: 2;
+    --estoq-column: 13/16;
+    --estoq-row: 2;
+
+    --img-column: 1/6;
+    --img-row: 1/4;
+    --upl-column: 6/10;
+    --upl-row: 3;
+
+    --cancel-column: 10/13;
+    --cancel-row: 3;
+    --regist-column: 13/16;
+    --regist-row: 3;
+}
+
+.admin .wrapper-admin .container-admin ul .novo-produto {
+    border: 3px solid #29ad6e36;
+    border-top: none;
+    border-bottom: none;
+    width: 100%;
+    padding: 20px 10px;
+
+    display: grid;
+    grid-template-columns: var(--boss-grid);
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    animation: showProdutoForm 250ms ease-out 1 forwards;
+}
+.admin .wrapper-admin .container-admin ul .novo-produto > div {
+    border: 1px solid #707a741e;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+}
+
+.admin .wrapper-admin .container-admin ul .novo-produto .form-nome {
+    height: max-content; min-height: max-content;
+    grid-column: var(--nome-column);
+    grid-row: var(--nome-row);
+}
+.admin .wrapper-admin .container-admin ul .novo-produto .form-categoria {
+    height: max-content; min-height: max-content;
+    grid-column: var(--categ-column);
+    grid-row: var(--categ-row);
+}
+.admin .wrapper-admin .container-admin ul .novo-produto .form-valor {
+    height: max-content; min-height: max-content;
+    grid-column: var(--valor-column);
+    grid-row: var(--valor-row);
+}
+
+.admin .wrapper-admin .container-admin ul .novo-produto .form-estoque {
+    height: max-content; min-height: max-content;
+    grid-column: var(--estoq-column);
+    grid-row: var(--estoq-row);
+}
+.admin .wrapper-admin .container-admin ul .novo-produto .form-imagem {
+    grid-column: var(--upl-column);
+    grid-row: var(--upl-row);
+}
+
+.admin .wrapper-admin .container-admin ul .novo-produto .form-img {
+    border: 1px solid rgba(128, 128, 128, 0.301);
+    border-radius: 5px;
+    height: 100%; width: 100%;
+    padding: 5px;
+
+    grid-column: var(--img-column);
+    grid-row: var(--img-row);
+    
+    position: relative;
+    cursor: pointer;
+}
+.admin .wrapper-admin .container-admin ul .novo-produto .form-img > input {
+    grid-column: 3/6;
+    grid-row: 3;
+}
+
+
+.admin .wrapper-admin .container-admin ul .novo-produto button {
+    background-color: transparent;
+    border-radius: 7px;
+    height: max-content; width: max-content;
+    padding: 10px 20px;
+
+    align-self: center;
+    justify-self: center;
+
+    cursor: pointer;
+    transition: all 250ms ease-out;
+}
+.admin .wrapper-admin .container-admin ul .novo-produto button.cancelar {
+    border: 2px solid #d9534f;
+    color: #d9534f;
+
+    grid-column: var(--cancel-column);
+    grid-row: var(--cancel-row);
+}
+.admin .wrapper-admin .container-admin ul .novo-produto button.cancelar:hover {
+    background: #d9534f;
+    color: white;
+}
+.admin .wrapper-admin .container-admin ul .novo-produto button.registrar {
+    border: 2px solid #5bc0de;
+    color: #5bc0de;
+
+    grid-column: var(--regist-column);
+    grid-row: var(--regist-row);
+}
+.admin .wrapper-admin .container-admin ul .novo-produto button.registrar:hover {
+    background: #5bc0de;
+    color: white;
+} 
+
+
+
+
+.admin .wrapper-admin .container-admin ul .novo-produto .form-img > i {
+    color: #d2e0dd;
+    font-size: 8rem;
+    opacity: 0;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: all 250ms ease-out;
+    pointer-events: none;
+}
+.admin .wrapper-admin .container-admin ul .novo-produto .form-img:hover > i {
+    opacity: 1;
+}
+.admin .wrapper-admin .container-admin ul .novo-produto .form-img:hover .img {
+    filter: brightness(0.5);
+}
+.admin .wrapper-admin .container-admin ul .novo-produto .form-img .img {
+    background-color: white;
+    border-radius: 5px;
+    height: 100%; width: 100%;
+
+    position: relative;
+    overflow: hidden;
+    transition: all 250ms ease-out;
+}
+.admin .wrapper-admin .container-admin ul .novo-produto .form-img img {
+    height: 100%; width: auto;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    object-fit: cover;
+}
+
+
+
+
+.admin .wrapper-admin .container-admin ul .novo-produto > div .content {
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: 1fr max-content max-content;
+    grid-template-rows: auto;
+    align-items: center;
+
+    position: relative;
+    z-index: 1;
+}
+.admin .wrapper-admin .container-admin ul .novo-produto > div .content > input,
+.admin .wrapper-admin .container-admin ul .novo-produto > div .content > select {
+    background-color: #dbdbdb13;
+    border: 1px solid #707a7441;
+    border-radius: 3px;
+    height: 30px; width: 100%;
+    padding: 5px;
+
+    z-index: 2;
+}
+
+.admin .wrapper-admin .container-admin ul .novo-produto > div .content .erro {
+    font-size: 0.8rem;
+    color: red;
+
+    position: absolute;
+    right: 0;
+    transform: translateY(120%);
+}
+.admin .wrapper-admin .container-admin ul .novo-produto > div .content .erro.show {
+    animation: erroShow 250ms ease-out;
+}
+@keyframes erroShow {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 850px) {
+    :root {
+        --boss-grid: repeat(16, 1fr);
+
+        --nome-column:  1/17;
+        --nome-row: 1;
+    
+        --categ-column: 7/17;
+        --categ-row: 3;
+
+        --valor-column: 9/17;
+        --valor-row: 2;
+
+        --estoq-column: 1/9;
+        --estoq-row: 2;
+    
+        --img-column: 1/7;
+        --img-row: 3/5;
+        --upl-column: 7/17;
+        --upl-row: 4;
+    
+        --cancel-column: 1/9;
+        --cancel-row: 6;
+        --regist-column: 9/17;
+        --regist-row: 6;
+    }
+    .admin .wrapper-admin .container-admin ul .novo-produto button {
+        margin: 0 10px;
+    }
+    .admin .wrapper-admin .container-admin ul .novo-produto button.cancelar {
+        width: 80%;
+        justify-self: flex-end;
+    }
+    .admin .wrapper-admin .container-admin ul .novo-produto button.registrar {
+        width: 80%;
+        justify-self: flex-start;
+    }    
+}

@@ -1,0 +1,388 @@
+
+.minhas-compras {
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.minhas-compras h2 {
+    margin: 2rem 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.minhas-compras .minhasCompras-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container {
+    /* background-color: #f0f0f0; */
+    /* box-shadow: 0 1px 2px #00000011;
+    border: 1px solid #dddddd77;
+    border-radius: 10px; */
+    width: 100%; max-width: 1080px;
+    padding: 1rem;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    position: relative;
+}
+
+
+/* 1º Linhas de "mihnas compras */
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .titleInfos {
+    width: 100%;
+    padding: 0 2rem;
+
+    font-size: 0.95rem;
+    color: rgba(0, 15, 8, 0.747);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .titleInfos p:nth-of-type(1) {
+    font-size: 1rem;
+    text-align: center;
+    grid-column: 2;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .titleInfos p:nth-of-type(2) {
+    text-align: right;
+    grid-column: 3;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .titleInfos > i.fa-arrow-left {
+    background-color: #0111091e;
+    border-radius: 20px;
+    height: 1.5rem; width: auto;
+    aspect-ratio: 1/1;
+    padding-left: 4px;
+
+    color: #02160cc4;
+    opacity: 0.85;
+    font-size: 1.05rem;
+
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0.5rem;
+
+    cursor: pointer;
+    transition: all 250ms ease-out;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .titleInfos > i.fa-arrow-left:hover {
+    background-color: #0111092c;
+    transform: translateX(-2px) scale(1.025);
+}
+
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item {
+    background-color: #fcfcfc;
+    box-shadow: -1px 2px 4px #00000018;
+    border: 1px solid #dddddd;
+    border-radius: 15px;
+    width: 100%;
+
+    overflow: hidden;
+}
+
+/* Infos de cada produto listado */
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item .item-title {
+    background-color: #85cfb323;
+    border: 1px solid #00000018;
+    width: 100%;
+    padding: 1rem 2rem;
+
+    display: flex;
+    gap: 1rem;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item .item-title .item-id {
+    padding-left: 2rem;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item .item-title div {
+    width: 25%;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item .item-title div p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item .item-title div p:nth-of-type(1) {
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.75;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item .item-title div p:nth-of-type(2) {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item .item-title .item-id > div {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item .item-title .item-id > div p {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    font-weight: 400;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item .item-title .item-id > div i {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    font-weight: 400;
+
+    align-self: center;
+    cursor: pointer;
+    transition: all 250ms ease-out;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item .item-title .item-id > div i:hover {
+    transform: translateX(1px) scale(1.05);
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item .item-title .item-id p.copyAlert {
+    color: #271d03;
+    font-size: 0.75rem;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    transform: translate(10%, 100%);
+}
+
+
+/* Cada produto listado */
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul {
+    border: 1px solid #00000018;
+    width: 100%;
+    padding: 0 2rem;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul li {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.301);
+    padding: 1rem;
+    display: flex;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul li.end {
+    border-bottom: none;
+    padding: 1rem;
+    display: flex;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul li .img {
+    border: 1px solid #80808050;
+    box-shadow: -1px 1px 1px #00000038;
+    border-radius: 5px;
+    height: auto; width: 150px;
+    min-width: 125px;
+
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul li .img > img {
+    height: 100%; width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    object-position: top;
+}
+
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul li .infos {
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul li .infos div > p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul li .infos .status {
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.85;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul li .infos .entrega {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul li .infos .entrega span {
+    opacity: 1;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul li .infos .nome {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 0.95rem;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul li .infos .qntd,
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul li .infos .valor {
+    font-size: 0.85rem;
+    opacity: 0.75;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul li .vend-por {
+    width: max-content;
+    white-space: nowrap;
+
+    align-self: center;
+    text-align: center;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul li .vend-por p {
+    font-size: 0.9rem;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul li .vend-por a {
+    border-bottom: 1px solid transparent;
+    color: #0c5533b7;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 250ms ease-out;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul li .vend-por a:hover {
+    color: #0c5533;
+    border-bottom: 1px solid #0c5533;
+}
+
+
+/* Pesquisando "minhas compras" */
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container > i.fa-shopping-basket {
+    color: #02160cc4;
+    opacity: 0.85;
+    font-size: 4rem;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .pesquisar-comprador {
+    min-width: 320px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .pesquisar-comprador div {
+    position: relative;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .pesquisar-comprador div label {
+    display: flex;
+    flex-direction: column;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .pesquisar-comprador div label .iconI {
+    border-radius: 50%;
+    height: 1.8rem; width: auto;
+    aspect-ratio: 1/1;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    overflow: hidden;
+    transition: all 150ms ease-out;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .pesquisar-comprador div label .iconI i {
+    height: 100%; width: 100%;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .pesquisar-comprador div label .iconI i.fa-check {
+    background-color: #9febc181;
+    color: #0c994c;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .pesquisar-comprador div label .iconI i.fa-xmark {
+    background-color: #eb9f9f81;
+    color: #be0d0d;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .pesquisar-comprador div label p {
+    padding-left: 10px;
+    font-size: 0.85rem;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .pesquisar-comprador div label p span {
+    color: #be0d0d;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .pesquisar-comprador div label input {
+    height: 1.8rem; width: 100%;
+
+    border: 1px solid #001f1879;
+    border-radius: 20px;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+}
+
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .pesquisar-comprador .irCompras {
+    background: linear-gradient(135deg, #1dcfa9 40%, #14a384 100%);
+    box-shadow: -1px 2px 2px #001f132d;
+    border: 1px solid #14a3843f;
+    border-radius: 50px;
+    height: auto; width: 95%;
+    padding: 0.75rem 0;
+    margin: 0 auto;
+
+    color: #F5F5F5;
+    font-size: 1rem;
+    font-weight: 600;
+    text-shadow: 0px -1px 3px #01241060;
+
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.minhas-compras .minhasCompras-wrapper .minhasCompras-container .pesquisar-comprador .irCompras:hover {
+    transform: scale(1.025);
+}
+
+
+
+@media (max-width: 1025px) {
+    .minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul li .infos {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 750px) {
+    .minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul {
+        padding: 0;
+    }
+    .minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item ul li .vend-por {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item .item-title {
+        padding: 0.5rem 1rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-evenly;
+    }
+    .minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item .item-title > div {
+        width: 100%;
+    }
+    .minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item .item-title > div:nth-of-type(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item .item-title > div:nth-of-type(2) {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    .minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item .item-title > div:nth-of-type(3) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .minhas-compras .minhasCompras-wrapper .minhasCompras-container .minhasCompras-item .item-title .item-id {
+        display: none;
+    }
+}

@@ -1,0 +1,101 @@
+:root {
+
+    /* Criação de nova categoria */
+    --height-newCateg-out: 50px;
+    --widht-newCateg-out: 50px;
+    --radius-newCateg-out: calc( var(--height-newCateg-out) / 2 );
+
+    --height-newCateg-show: 220px;
+    --widht-newCateg-show: 500px;
+    --radius-newCateg-show: 15px;
+}
+
+/* Aparição do state "mensagem" em ProductCard.jsx */
+@keyframes buyAddCart {
+    from {
+        opacity: 0;
+        filter: blur(3px);
+        transform: translate(-50%, -100%);
+    } to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes showProdutoForm {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+        filter: blur(5px);
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+/* Criação de nova categoria, detalhes em admin.css */
+/* Botão circle+plus >> caixa nova categ (vice-versa) */
+.admin .wrapper-admin .container-admin .nova-categoriaAdmin.show {
+    animation: newCategShow 750ms ease-out 1 forwards;
+}
+@keyframes newCategShow {
+    from {
+        border-radius: var(--radius-newCateg-out);
+        height: var(--height-newCateg-out); width: var(--widht-newCateg-out);
+    } to {
+        border-radius: var(--radius-newCateg-show);
+        height: var(--height-newCateg-show); width: var(--widht-newCateg-show);
+        min-height: var(--height-newCateg-out);    
+    }
+}
+.admin .wrapper-admin .container-admin .nova-categoriaAdmin.out {
+    cursor: pointer;
+    animation: newCategOut 450ms ease-out 1 forwards;
+}
+@keyframes newCategOut {
+    from {
+        border-radius: var(--radius-newCateg-show);
+        height: var(--height-newCateg-show); width: var(--widht-newCateg-show);
+        min-height: var(--height-newCateg-out);    
+    } to {
+        border-radius: var(--radius-newCateg-out);
+        height: var(--height-newCateg-out); width: var(--widht-newCateg-out);
+    }
+}
+/* Oculta/mostra o conteúdo dentro da div de nova categ */
+.admin .wrapper-admin .container-admin .nova-categoriaAdmin.out .nova-categoriaContent {
+    animation: newCategOutContent 350ms ease-out 1 forwards;
+    pointer-events: none;
+}
+@keyframes newCategOutContent {
+    0% {
+        transform: translate(50%, 0);
+        filter: blur(0);
+    } 100% {
+        transform: translate(50%, -20px);
+        filter: blur(10px);
+        opacity: 0;
+    }
+}
+.admin .wrapper-admin .container-admin .nova-categoriaAdmin.show .nova-categoriaContent {
+    animation: newCategShowContent 450ms ease-out 1 forwards;
+}
+@keyframes newCategShowContent {
+    0% {
+        transform: translate(50%, -20px);
+        filter: blur(10px);
+        opacity: 0;
+    } 100% {
+        transform: translate(50%, 0);
+        filter: blur(0);
+    }
+}
+
+@media (max-width: 750px) {
+    :root {
+        --height-newCateg-show: 220px;
+        --widht-newCateg-show: 100%;           
+    }
+}

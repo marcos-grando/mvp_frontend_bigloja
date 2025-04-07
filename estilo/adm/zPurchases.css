@@ -1,0 +1,101 @@
+.admin-compras {
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.admin-compras h3 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.admin-compras .admin-pedido {
+    background-color: #fcfcfc;
+    box-shadow: -1px 2px 4px #00000018;
+    border: 1px solid #dddddd;
+    border-radius: 15px;
+    width: 100%; max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    overflow: hidden;
+}
+.admin-compras .admin-pedido .infos-pedido {
+    background-color: #85cfb323;
+    border: 1px solid #00000018;
+    padding: 1rem 2rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.admin-compras .admin-pedido .infos-pedido p {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    font-weight: 500;
+}
+
+.admin-compras .admin-pedido .itens {
+    border-top: 1px solid #00000018;
+    padding: 0 2rem;
+}
+.admin-compras .admin-pedido .itens .item {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.301);
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+.admin-compras .admin-pedido .itens .item img {
+    border: 1px solid #80808050;
+    box-shadow: -1px 1px 1px #00000038;
+    border-radius: 5px;
+    height: 120px; width: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: top;
+}
+.admin-compras .admin-pedido .itens .item div {
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+.admin-compras .admin-pedido .itens .item div p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
+.admin-compras .admin-pedido .itens .item div .qntd,
+.admin-compras .admin-pedido .itens .item div .valor {
+    font-size: 0.85rem;
+    opacity: 0.75;
+}
+
+.admin-compras .admin-pedido .infos-comprador {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+.admin-compras .admin-pedido .infos-comprador p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+.admin-compras .admin-pedido .infos-comprador button {
+    background: linear-gradient(135deg, #e64e4e 0%, #b83737 100%);
+    box-shadow: -1px 2px 2px #001f132d;
+    border: 1px solid #a93030a1;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-shadow: 0px -1px 2px #00000033;
+
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.admin-compras .admin-pedido .infos-comprador button:hover {
+    transform: scale(1.03);
+}

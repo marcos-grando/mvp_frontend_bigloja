@@ -1,0 +1,162 @@
+
+/* Cada produtos individual */
+.admin .wrapper-admin .container-admin ul li {
+    padding: 0 10px;
+}
+
+.admin .wrapper-admin .container-admin ul li .warning-excluir {
+    height: 100vh; width: 100vw;
+    background-color: #041a1797;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000000000000000000000000000000000000000000001;
+
+    pointer-events: auto !important;
+}
+.admin .wrapper-admin .container-admin ul li .warning-excluir .quest-excluir {
+    background-color: rgb(247, 250, 250);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #00000027;
+    border-radius: 15px;
+    padding: 40px;
+
+    font-weight: 600;
+    text-align: center;
+    display: grid;
+    gap: 1rem;
+}
+.admin .wrapper-admin .container-admin ul li .warning-excluir .quest-excluir p {
+    color: rgba(3, 33, 21, 0.753);
+}
+.admin .wrapper-admin .container-admin ul li .warning-excluir .quest-excluir p:nth-of-type(1) {
+    grid-column: 1/6;
+    grid-row: 1;
+}
+.admin .wrapper-admin .container-admin ul li .warning-excluir .quest-excluir p:nth-of-type(2) {
+    color: #0c783f;
+
+    grid-column: 1/6;
+    grid-row: 2;
+}
+.admin .wrapper-admin .container-admin ul li .warning-excluir .quest-excluir p:nth-of-type(3) {
+    grid-column: 1/6;
+    grid-row: 3;
+}
+
+.admin .wrapper-admin .container-admin ul li .warning-excluir .quest-excluir button {
+    border: none;
+    padding: 10px 15px;
+    grid-row: 4;
+
+    cursor: pointer;
+    transition: all 250ms ease-out;
+}
+.admin .wrapper-admin .container-admin ul li .warning-excluir .quest-excluir button:nth-of-type(1) {
+    background: #d9534f;
+    color: white;
+
+    grid-column: 2;
+}
+.admin .wrapper-admin .container-admin ul li .warning-excluir .quest-excluir button:nth-of-type(2) {
+    background: #5bc0de;
+    color: white;
+
+    grid-column: 4;
+}
+.admin .wrapper-admin .container-admin ul li .warning-excluir .quest-excluir button:hover {
+    transform: scale(1.05);
+}
+
+
+.admin .wrapper-admin .container-admin ul li .produto-item {
+    border: 1px solid transparent;
+    border-bottom: 1px solid #8f949141;
+    height: 100%; width: 100%;
+    padding: 10px 0px;
+
+    font-size: 0.8rem;
+
+    display: grid;
+    grid-template-columns: 40px 1fr 120px 60px 30px 30px;
+    align-items: center;
+    gap: 4px;
+    
+    cursor: pointer;
+    transition: all 250ms ease-out;
+}
+.admin .wrapper-admin .container-admin ul li .produto-item:hover {
+    transform: scale(1.02);
+    border: 1px solid #63a2943f;
+    border-radius: 5px;
+}
+
+.admin .wrapper-admin .container-admin ul li .produto-item p {
+    border-right: 1px solid #002e183a;
+}
+.admin .wrapper-admin .container-admin ul li .produto-item p,
+.admin .wrapper-admin .container-admin ul li .produto-item i {
+    height: 100%; min-width: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.admin .wrapper-admin .container-admin ul li .produto-item i {
+    border-radius: 16px;
+    aspect-ratio: 1/1;
+}
+.admin .wrapper-admin .container-admin ul li .produto-item i.fa-trash {
+    color: #10896f;
+    background-color: rgba(229, 229, 229, 0.389);
+    z-index: 100001;
+    transition: all 250ms ease-out;
+}
+.admin .wrapper-admin .container-admin ul li .produto-item i.fa-trash:hover {
+    background-color: #10896f;
+    color: rgb(229, 229, 229);
+}
+.admin .wrapper-admin .container-admin ul li .produto-item .nome,
+.admin .wrapper-admin .container-admin ul li .produto-item .valor {
+    height: 100%;
+    padding: 0 10px;
+    justify-content: flex-start;
+}
+
+
+.admin .wrapper-admin .container-admin ul li.li-editando {
+    border: 1px solid #60686441;
+    background-color: #e5ebe859;
+    transition: all 250ms ease-out;
+}
+.admin .wrapper-admin .container-admin ul li.li-editando .produto-form {
+    animation: showProdutoForm 250ms ease-out 1 forwards;
+}
+
+
+@media (max-width: 750px) {
+    .admin .wrapper-admin .container-admin ul li .produto-item {
+        grid-template-columns: 40px 1fr 30px 30px;
+    }
+    .admin .wrapper-admin .container-admin ul li .produto-item .nome {
+        padding-top: 5px;
+        display: block;
+
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .admin .wrapper-admin .container-admin ul li .produto-item .valor,
+    .admin .wrapper-admin .container-admin ul li .produto-item .estoque {
+        display: none;
+    }
+}

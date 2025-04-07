@@ -1,0 +1,241 @@
+:root {
+    --boss-grid-form: repeat(15, 1fr);
+
+    --nome-column-form:  6/16;
+    --nome-row-form: 1;
+
+    --categ-column-form: 6/12;
+    --categ-row-form: 2;
+    --valor-column-form: 12/16;
+    --valor-row-form: 2;
+    --estoq-column-form: 12/16;
+    --estoq-row-form: 3;
+    --upl-column-form: 6/12;
+    --upl-row-form: 3;
+
+    --img-column-form: 1/6;
+    --img-row-form: 1/4;
+
+    --cancel-column-form: 10/13;
+    --regist-column-form: 13/16;
+}
+/* ""Formulário"" com os campos para update infos */
+.admin .wrapper-admin .container-admin ul li .produto-form {
+    width: 100%;
+    padding: 20px 10px;
+    /* padding-top: 5px; */
+
+    display: grid;
+    grid-template-columns: var(--boss-grid-form);
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+}
+.admin .wrapper-admin .container-admin ul li .produto-form > button {
+    display: none;
+}
+.admin .wrapper-admin .container-admin ul li .produto-form > div {
+    border: 1px solid #707a741e;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+}
+
+/* Organizando as posições do grid */
+.admin .wrapper-admin .container-admin ul li .produto-form .form-nome {
+    height: max-content; min-height: max-content;
+    grid-column: var(--nome-column-form);
+    grid-row: var(--nome-row-form);
+}
+
+.admin .wrapper-admin .container-admin ul li .produto-form .form-categoria {
+    height: max-content; min-height: max-content;
+    grid-column: var(--categ-column-form);
+    grid-row: var(--categ-row-form);
+}
+.admin .wrapper-admin .container-admin ul li .produto-form .form-valor {
+    height: max-content; min-height: max-content;
+    grid-column: var(--valor-column-form);
+    grid-row: var(--valor-row-form);
+}
+
+.admin .wrapper-admin .container-admin ul li .produto-form .form-estoque {
+    height: max-content; min-height: max-content;
+    grid-column: var(--estoq-column-form);
+    grid-row: var(--estoq-row-form);
+}
+.admin .wrapper-admin .container-admin ul li .produto-form .form-imagem {
+    grid-column: var(--upl-column-form);
+    grid-row: var(--upl-row-form);
+}
+.admin .wrapper-admin .container-admin ul li .produto-form .form-imagem .fa-pencil {
+    display: none;
+}
+.admin .wrapper-admin .container-admin ul li .produto-form .form-img {
+    border: 1px solid rgba(128, 128, 128, 0.301);
+    border-radius: 5px;
+    height: 100%; width: 100%;
+    padding: 5px;
+
+    grid-column: var(--img-column-form);
+    grid-row: var(--img-row-form);
+    position: relative;
+    cursor: pointer;
+}
+
+.admin .wrapper-admin .container-admin ul li .produto-form .form-img > i {
+    color: #d2e0dd;
+    font-size: 8rem;
+    opacity: 0;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: all 250ms ease-out;
+    pointer-events: none;
+}
+.admin .wrapper-admin .container-admin ul li .produto-form .form-img:hover > i {
+    opacity: 1;
+}
+
+.admin .wrapper-admin .container-admin ul li .produto-form .form-img:hover .img {
+    filter: brightness(0.5);
+}
+
+.admin .wrapper-admin .container-admin ul li .produto-form .form-img .img {
+    background-color: white;
+    border-radius: 5px;
+    height: 100%; width: 100%;
+
+    position: relative;
+    overflow: hidden;
+    transition: all 250ms ease-out;
+}
+.admin .wrapper-admin .container-admin ul li .produto-form .form-img img {
+    height: 100%; width: auto;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    object-position: top;
+}
+
+/* Conteúdo dentro do espaço p/ update (inputs) */
+.admin .wrapper-admin .container-admin ul li .produto-form > div .content {
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: 1fr max-content max-content;
+    grid-template-rows: auto;
+    align-items: center;
+    gap: 5px;
+
+    position: relative;
+    z-index: 1;
+}
+.admin .wrapper-admin .container-admin ul li .produto-form > div .content > input,
+.admin .wrapper-admin .container-admin ul li .produto-form > div .content > select {
+    background-color: #dbdbdb13;
+    border: 1px solid #707a7441;
+    border-radius: 3px;
+    height: 30px; width: 100%;
+    padding: 5px 25px 5px 10px;
+
+    z-index: 2;
+}
+.admin .wrapper-admin .container-admin ul li .produto-form > div .content > select  {
+    appearance: none;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16'><path fill='%23000' d='M7 10l5 5 5-5z'/></svg>") no-repeat center right 30px;
+    background-size: 16px;
+}
+
+.admin .wrapper-admin .container-admin ul li .produto-form > div .content i:not(.i-edit > i) {
+    border-radius: 50%;
+    height: 100%; width: auto;
+    aspect-ratio: 1/1;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: grey;
+    opacity: 0.5;
+    transition: all 150ms ease-out;
+}
+.admin .wrapper-admin .container-admin ul li .produto-form > div .content i:hover {
+    transform: scale(1.05);
+}
+.admin .wrapper-admin .container-admin ul li .produto-form > div .content .fa-check.editando {
+    color: green;
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: auto;
+}
+.admin .wrapper-admin .container-admin ul li .produto-form > div .content .fa-check.editando:hover {
+    background-color: #67e2c731;
+}
+.admin .wrapper-admin .container-admin ul li .produto-form > div .content .fa-ban.editando {
+    color: rgb(255, 72, 0);
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: auto;
+}
+.admin .wrapper-admin .container-admin ul li .produto-form > div .content .fa-ban.editando:hover {
+    background-color: #e267672a;
+}
+
+
+.admin .wrapper-admin .container-admin ul li .produto-form > div .content > .i-edit {
+    height: auto; width: 100%;
+
+    color: #09755e;
+    font-size: 1rem;
+    text-align: end;
+
+    grid-column: 1/2;
+
+    position: absolute;
+    pointer-events: none;
+    z-index: 101;
+}
+.admin .wrapper-admin .container-admin ul li .produto-form > div .content .i-edit > i {
+    padding: 0 5px;
+    pointer-events: all;
+    cursor: pointer;
+    z-index: 102;
+    
+    transition: all 150ms ease-out;
+}
+
+/* #1dcfa9 #14a384 */
+
+
+@media (max-width: 750px) {
+    :root {
+        --boss-grid-form: repeat(16, 1fr);
+
+        --img-column-form: 1/7;
+        --img-row-form: 3/6;
+
+        --nome-column-form:  1/17;
+        --nome-row-form: 1;
+
+        --categ-column-form: 7/17;
+        --categ-row-form: 4;
+
+        --valor-column-form: 1/9;
+        --valor-row-form: 2;
+
+        --estoq-column-form: 9/17;
+        --estoq-row-form: 2;
+
+        --upl-column-form: 7/17;
+        --upl-row-form: 5;
+
+        --cancel-column-form: 10/13;
+        --regist-column-form: 13/16;
+    }
+}
