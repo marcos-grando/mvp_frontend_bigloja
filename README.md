@@ -71,6 +71,8 @@ Esse frontend funciona junto com as APIs feitas em Flask. Tudo é orquestrado pe
 
 ### Estrutura do sistema:
 
+![Fluxograma do sistema](./fluxograma.jpg)
+
 - 🌐 **API externa**: [FakeStore](https://fakestoreapi.com/) → usada para popular a base com produtos fictícios. O modelo `Produto` foi estruturado com base nos dados dessa API (nome, valor, imagem, etc).
 - 🔹 [`backend_categorias`](https://github.com/seu-usuario/backend_categorias) → responsável pelo cadastro e gerenciamento das categorias dos produtos
 - 🔹 [`backend_produtos`](https://github.com/seu-usuario/backend_produtos) → responsável pelo gerenciamento dos produtos (incluindo uploads das imagens dos produtos)
