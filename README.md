@@ -71,14 +71,14 @@ Esse frontend funciona junto com as APIs feitas em Flask. Tudo é orquestrado pe
 
 ### Estrutura do sistema:
 
-![Fluxograma do sistema](./fluxograma.jpg)
-
 - 🌐 **API externa**: [FakeStore](https://fakestoreapi.com/) → usada para popular a base com produtos fictícios. O modelo `Produto` foi estruturado com base nos dados dessa API (nome, valor, imagem, etc).
 - 🔹 [`backend_categorias`](https://github.com/seu-usuario/backend_categorias) → responsável pelo cadastro e gerenciamento das categorias dos produtos
 - 🔹 [`backend_produtos`](https://github.com/seu-usuario/backend_produtos) → responsável pelo gerenciamento dos produtos (incluindo uploads das imagens dos produtos)
 - 🔹 [`backend_compras`](https://github.com/seu-usuario/backend_compras) → responsável por registrar e consultar compras feitas na loja
 - 🔸 [`backend_shared`](https://github.com/seu-usuario/backend_shared) → módulo auxiliar compartilhado (banco de dados, pastas de upload, etc)
 - 💠 [`frontend`] ← Você está nesse repositório
+
+![Fluxograma](./fluxograma.jpg)
 
 ***OBS: `docker-compose`***
  - O sistema utiliza 3 APIs diferentes, com dependências entre os módulos
