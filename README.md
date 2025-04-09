@@ -79,7 +79,7 @@ Esse frontend funciona junto com as APIs feitas em Flask. Tudo é orquestrado pe
 - 💠 [`frontend`] ← Você está nesse repositório
 
 ---
-![Fluxograma do sistema](./fluxograma.png)
+![Fluxograma do sistema](./fluxograma.jpg)
 ---
 
 ***OBS: `docker-compose`***
