@@ -78,9 +78,10 @@ Esse frontend funciona junto com as APIs feitas em Flask. Tudo é orquestrado pe
 - 🔸 [`backend_shared`](https://github.com/seu-usuario/backend_shared) → módulo auxiliar compartilhado (banco de dados, pastas de upload, etc)
 - 💠 [`frontend`] ← Você está nesse repositório
 
-***<img src="./fluxograma.jpg" alt="Fluxograma" width="500"/>***
+### Fluxograma do sistema
+<img src="./fluxograma.jpg" alt="Fluxograma" width="500"/>
 
-***OBS: `docker-compose`***
+### ***OBS: `docker-compose`***
  - O sistema utiliza 3 APIs diferentes, com dependências entre os módulos
  - Por isso, é recomendado utilizar o `docker-compose`, que está nesse repositório (`frontend`)
  - Isso evita a necessidade de buildar e subir manualmente cada componente um por um
