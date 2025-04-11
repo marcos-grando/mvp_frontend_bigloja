@@ -2,50 +2,50 @@ services:
 
     backend_produtos:
         build:
-            context: ./backend_produtos
+            context: ../backend_produtos
             dockerfile: Dockerfile
         image: backend_produtos
         container_name: backend_produtos
         ports:
             - "5001:5000"
         volumes:
-            - ./backend_shared:/app/shared
-            - ./backend_shared/uploads:/app/uploads
+            - ../backend_shared:/app/shared
+            - ../backend_shared/uploads:/app/uploads
         depends_on:
             - backend_categorias
         restart: always
 
     backend_categorias:
         build:
-            context: ./backend_categorias
+            context: ../backend_categorias
             dockerfile: Dockerfile
         image: backend_categorias
         container_name: backend_categorias
         ports:
             - "5002:5000"
         volumes:
-            - ./backend_shared:/app/shared
+            - ../backend_shared:/app/shared
         restart: always
 
     backend_compras:
         build:
-            context: ./backend_compras
+            context: ../backend_compras
             dockerfile: Dockerfile
         image: backend_compras
         container_name: backend_compras
         ports:
             - "5003:5000"
         volumes:
-            - ./backend_shared:/app/shared
-            - ./backend_shared/uploads:/app/uploads
-            - ./backend_shared/imgs_compras:/app/imgs_compras
+            - ../backend_shared:/app/shared
+            - ../backend_shared/uploads:/app/uploads
+            - ../backend_shared/imgs_compras:/app/imgs_compras
         depends_on:
             - backend_produtos
         restart: always
 
     frontend:
         build:
-            context: ./frontend
+            context: .
             dockerfile: Dockerfile
         image: frontend
         container_name: frontend
